@@ -154,7 +154,7 @@ body {
   }
 
   .bx-content {
-    position: relative;
+    /* position: relative; */
     width: 100%;
     min-width: 0;
     height: auto;
