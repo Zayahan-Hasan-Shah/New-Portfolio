@@ -9,7 +9,6 @@ export function Contact() {
   const [subject, setSubject] = useState('');
   const [message, setMessage] = useState('');
   const [status, setStatus] = useState<'idle' | 'sending' | 'sent' | 'error'>('idle');
-  const [errorMessage, setErrorMessage] = useState<string>('');
 
   const maxLen = 500;
   const count = message.length;
@@ -28,13 +27,11 @@ export function Contact() {
     const publicKey = import.meta.env.VITE_EMAILJS_PUBLIC_KEY as string | undefined;
 
     if (!serviceId || !templateId || !publicKey) {
-      setErrorMessage('Missing EmailJS environment variables.');
       setStatus('error');
       return;
     }
 
     setStatus('sending');
-    setErrorMessage('');
     try {
       await emailjs.send(
         serviceId,
@@ -62,7 +59,6 @@ export function Contact() {
       }
       // eslint-disable-next-line no-console
       console.error('EmailJS send failed:', err);
-      setErrorMessage(details ? `EmailJS error: ${details}` : 'EmailJS request failed. Check browser console for the exact error.');
       setStatus('error');
     }
   }
