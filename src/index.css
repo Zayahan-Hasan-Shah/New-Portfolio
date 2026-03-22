@@ -1,0 +1,203 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --bx-base: 230 235 244;
+    --bx-base-tint: 235 240 247;
+    --bx-base-shade: 189 193 200;
+
+    --bx-accent: 170 112 224;
+    --bx-secondary: 112 89 226;
+
+    --bx-stroke-controls: 168 176 193;
+    --bx-stroke-elements: 209 213 224;
+
+    --bx-text-bright: 34 35 44;
+    --bx-text-medium: 66 69 80;
+    --bx-text-muted: 102 106 121;
+    --bx-text-accent: 143 86 204;
+    --bx-text-secondary: 93 78 196;
+    --bx-text-placeholder: 150 155 178;
+
+    --bx-gradient-1: 206 196 239;
+    --bx-gradient-2: 245 197 205;
+    --bx-gradient-3: 172 143 227;
+  }
+
+  html.dark {
+    --bx-base: 17 18 24;
+    --bx-base-tint: 23 24 32;
+    --bx-base-shade: 42 45 60;
+
+    --bx-accent: 170 112 224;
+    --bx-secondary: 112 89 226;
+
+    --bx-stroke-controls: 90 96 120;
+    --bx-stroke-elements: 52 56 74;
+
+    --bx-text-bright: 236 238 246;
+    --bx-text-medium: 200 205 222;
+    --bx-text-muted: 154 160 182;
+    --bx-text-accent: 191 145 255;
+    --bx-text-secondary: 158 141 255;
+    --bx-text-placeholder: 126 132 156;
+
+    --bx-gradient-1: 78 67 128;
+    --bx-gradient-2: 114 56 82;
+    --bx-gradient-3: 84 64 142;
+  }
+
+  html {
+    width: 100%;
+    height: 100%;
+    font-size: 62.5%;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    scroll-behavior: smooth;
+  }
+
+  body {
+    position: relative;
+    width: 100%;
+    min-width: 360px;
+    overflow-x: unset !important;
+    font-family: Syne, sans-serif;
+    font-size: 1.7rem;
+    line-height: 1.2;
+    font-weight: 400;
+    text-rendering: optimizeLegibility;
+  }
+
+  ::selection {
+    background-color: rgba(112, 89, 226, 0.3);
+    color: #22232c;
+    text-shadow: none;
+  }
+
+  ::-webkit-scrollbar {
+    display: none;
+    width: 5px;
+    background: #bdc1c8;
+  }
+
+  @media only screen and (min-width: 768px) {
+    ::-webkit-scrollbar {
+      display: block;
+    }
+  }
+
+  ::-webkit-scrollbar-track {
+    background-color: #bdc1c8;
+  }
+
+  ::-webkit-scrollbar-thumb {
+    background: linear-gradient(to bottom, #aa70e0 0%, #7059e2 100%);
+    border-radius: 10px;
+  }
+}
+
+html,
+body {
+  height: 100%;
+}
+
+body {
+  margin: 0;
+  overflow-x: hidden;
+}
+
+#root {
+  min-height: 100%;
+}
+
+@layer utilities {
+  .gradient-background {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    overflow: hidden;
+  }
+
+  .bx-blur {
+    position: absolute;
+    z-index: 1;
+    border-radius: 900px;
+    filter: blur(clamp(40px, 7vw, 90px));
+  }
+
+  .bx-blur-1 {
+    background: #cec4ef;
+    height: clamp(400px, 20vw, 60vw);
+    width: calc(clamp(400px, 30vw, 70vw) * 1.1);
+    top: -10vh;
+    right: -5vw;
+  }
+
+  .bx-blur-2 {
+    background: #f5c5cd;
+    height: clamp(300px, 16vw, 46vw);
+    width: calc(clamp(300px, 16vw, 56vw) * 0.75);
+    top: 5vh;
+    right: 0vw;
+  }
+
+  .bx-blur-3 {
+    background: #ac8fe3;
+    height: clamp(100px, 20vw, 20vw);
+    width: calc(clamp(100px, 20vw, 20vw) * 2);
+    top: -10vh;
+    left: -10vw;
+  }
+
+  .bx-content {
+    position: relative;
+    width: 100%;
+    min-width: 0;
+    height: auto;
+  }
+
+  @media only screen and (min-width: 992px) {
+    .bx-content {
+      padding-left: 330px;
+    }
+  }
+
+  @media only screen and (min-width: 1200px) {
+    .bx-content {
+      padding-left: 360px;
+    }
+  }
+
+  @media only screen and (min-width: 1400px) {
+    .bx-content {
+      padding-left: 480px;
+    }
+  }
+
+  @media only screen and (min-width: 1600px) {
+    .bx-content {
+      padding-left: 500px;
+    }
+  }
+
+  .bx-animate-in-up {
+    opacity: 0;
+    transform: translate3d(0, 20px, 0);
+    filter: blur(8px);
+    will-change: transform, opacity;
+  }
+
+  .bx-section {
+    padding-top: 10rem;
+  }
+
+  @media only screen and (min-width: 992px) {
+    .bx-section {
+      padding-top: 12rem;
+    }
+  }
+}
