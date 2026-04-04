@@ -8,7 +8,7 @@ import { Card } from '../ui/Card';
 const ITEMS = [
   {
     company: 'Teknoloje Solutions, Karachi',
-    title: 'Associate Mobile Developer',
+    title: 'Software Engineer',
     dates: 'July 2025 — Present',
     bullets: [
       'Implemented secure authentication, permission-based screens, and push notifications to deliver timely alerts.',
@@ -19,7 +19,7 @@ const ITEMS = [
   },
   {
     company: 'Teknoloje Solutions, Karachi',
-    title: 'Mobile Application Developer Intern',
+    title: 'Software Engineer Intern',
     dates: 'April 2025 — July 2025',
     bullets: [
       'Built clean, maintainable Dart code from scratch following best practices and Git version control.',
