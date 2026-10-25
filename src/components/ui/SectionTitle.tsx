@@ -10,9 +10,9 @@ export function SectionTitle({ eyebrow, title }: Props) {
         <span className="h-1.5 w-1.5 rounded-full bg-secondary" />
         <span>{eyebrow}</span>
       </div>
-      <h2 className="mt-5 max-w-[1000px] bg-gradient-to-tr from-text-accent to-text-secondary bg-clip-text text-[44px] font-bold leading-[0.90] text-transparent sm:text-[56px]">
+      <h2 className="mt-5 max-w-[1000px] bg-gradient-to-tr from-text-accent to-text-secondary bg-clip-text text-[44px] font-bold leading-[0.90] tracking-[-0.07em] text-transparent sm:text-[56px]">
         {title.split(' ').map((word, index) => (
-          <span key={index} className="block">
+          <span key={index} className="block line-spacing-2">
             {word}
           </span>
         ))}

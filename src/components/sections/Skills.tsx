@@ -4,6 +4,8 @@ import { Card } from '../ui/Card';
 const SKILLS = [
   { label: 'Flutter', slug: 'flutter', level: 80 },
   { label: 'Kotlin', slug: 'kotlin', level: 60 },
+  { label: 'Swift', slug: 'swift', level: 60 },
+  { label: 'React Native', slug: 'react-native', level: 70 },
   { label: 'JavaScript', slug: 'javascript', level: 70 },
   { label: 'TypeScript', slug: 'typescript', level: 70 },
   { label: 'Python', slug: 'python', level: 70 },
@@ -20,7 +22,7 @@ function SkillLogo({ slug, label }: { slug: string; label: string }) {
   const dark = `https://cdn.simpleicons.org/${slug}/e6ebf4`;
 
   return (
-    <div className="relative flex h-11 w-11 items-center justify-center rounded-bx-m bg-white/55">
+    <div className="relative flex h-11 w-11 items-center justify-center rounded-bx-m">
       <img src={light} alt={label} loading="lazy" className="h-5 w-5 dark:hidden" />
       <img src={dark} alt={label} loading="lazy" className="hidden h-5 w-5 dark:block" />
     </div>

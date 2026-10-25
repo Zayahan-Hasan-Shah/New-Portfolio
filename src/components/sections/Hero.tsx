@@ -3,7 +3,7 @@ import { useRef } from 'react';
 import { useGSAP } from '../../hooks/useGSAP';
 import { gsap } from '../../utils/gsap';
 import { Button } from '../ui/Button';
-import cvPdf from '../../assets/resume/Zayahan Hasan Shah - CV.pdf';
+import cvPdf from '../../assets/resume/Zayahan_Hasan_Shah_CV.pdf';
 
 export function Hero() {
   const ref = useRef<HTMLElement | null>(null);
@@ -58,7 +58,7 @@ export function Hero() {
 
       <h1
         data-hero-title
-        className="bx-animate-in-up mt-6 max-w-[1000px] bg-gradient-to-tr from-text-accent to-text-secondary bg-clip-text text-[44px] font-bold leading-[0.90] text-transparent sm:text-[60px] lg:text-[80px]"
+        className="bx-animate-in-up mt-6 max-w-[1000px] bg-gradient-to-tr from-text-accent to-text-secondary bg-clip-text text-[44px] font-bold leading-[0.90] tracking-[-0.07em] text-transparent sm:text-[60px] lg:text-[80px]"
       >
         I'm Zayahan <br /> Hasan Shah
         <br />

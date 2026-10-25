@@ -1,7 +1,7 @@
 import { SectionTitle } from '../ui/SectionTitle';
 import { Card } from '../ui/Card';
 import { Button } from '../ui/Button';
-import cvPdf from '../../assets/resume/Zayahan Hasan Shah - CV.pdf';
+import cvPdf from '../../assets/resume/Zayahan_Hasan_Shah_CV.pdf';
 
 export function About() {
   const onDownloadCv = () => {

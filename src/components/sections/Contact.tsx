@@ -57,8 +57,7 @@ export function Contact() {
         const e = err as { status?: number; text?: string };
         details = `${e.status ?? ''}${e.text ? ` - ${e.text}` : ''}`.trim();
       }
-      // eslint-disable-next-line no-console
-      console.error('EmailJS send failed:', err);
+      console.error('EmailJS send failed:', details || err);
       setStatus('error');
     }
   }

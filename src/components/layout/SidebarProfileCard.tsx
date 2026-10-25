@@ -30,8 +30,7 @@ export function SidebarProfileCard() {
   const onNavClick = useCallback((id: string) => {
     const el = document.getElementById(id);
     if (!el) {
-      // eslint-disable-next-line no-console
-      console.warn(`[SidebarProfileCard] target not found: #${id}`);
+            console.warn(`[SidebarProfileCard] target not found: #${id}`);
       return;
     }
 
